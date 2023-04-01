@@ -1,1 +1,13 @@
-<p>search-bar works!</p>
+<div class="search-container">
+  <form class="search-form" #searchForm="ngForm" (ngSubmit)="onSearchSubmit(searchForm)">
+    <span class="logo" routerLink="/">ngGameZone</span>
+    <input
+      type="text"
+      name="search"
+      ngModel
+      class="search-input"
+      placeholder="Search 500,000+ games"
+    />
+    <button class="search-button">Search</button>
+  </form>
+</div>
