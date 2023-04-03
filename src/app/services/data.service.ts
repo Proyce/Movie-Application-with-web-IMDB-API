@@ -21,6 +21,6 @@ export class DataService {
       params = new HttpParams().set('ordering', ordering).set('search', search);
     }
 
-    return this.http.get<APIResponse<Game>>(this.baseUrl, { params: params });
+    return this.http.get<APIResponse<Game>>(`${this.baseUrl}/games`, { params: params });
   }
 }
